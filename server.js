@@ -2,7 +2,8 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3000;
 const app = express();
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const routes = require('./client/src/routes/routes.index')
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
