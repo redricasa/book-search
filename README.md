@@ -22,7 +22,6 @@ first run `npm install` in the terminal to install all the dependencies
     - Heroku add-ons:
         - MongoDB
         - mLab
-    
         
 ## Things learned:
 - How to integrate knowledge from gifTastic project and translate documentations for multiple npm modules to work with JSX instead of Jquery.
@@ -34,3 +33,5 @@ first run `npm install` in the terminal to install all the dependencies
 
     - Say you have multiple browsers open, each one visiting your site. If you save an book in one browser, then all of your browsers should notify you that a new book was saved.
     - Use Socket.io NPM package
+- Add number of API results in a badge using a component
+- Add autocomplete materialize css for the search input- [https://materializecss.com/autocomplete.html](https://materializecss.com/autocomplete.html)

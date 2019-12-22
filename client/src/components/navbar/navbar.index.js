@@ -1,6 +1,6 @@
 import React from "react";
 
-function Search(props){
+function Nav(props){
     return(
 
         <div class="navbar-fixed">
@@ -16,3 +16,5 @@ function Search(props){
         </div>
     )
 }
+
+export default Nav;

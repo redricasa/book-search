@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Jumbotron from "../components/Jumbotron";
 import Card from "../components/Card";
 import Book from "../components/Book";
-import Footer from "../components/Footer";
+
 import API from "../utils/API";
-import { Col, Row, Container } from "../components/Grid";
+// import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
 
 class Saved extends Component {
@@ -32,8 +32,7 @@ class Saved extends Component {
 
   render() {
     return (
-      <Container>
-        <Row>
+        // TO DO: add materialize formatting for cards with view and delete buttons
           <Col size="md-12">
             <Jumbotron>
               <h1 className="text-center">
@@ -75,7 +74,7 @@ class Saved extends Component {
           </Col>
         </Row>
         <Footer />
-      </Container>
+      {/* </Container> */}
     );
   }
 }
