@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
-import Saved from "./pages/Saved";
+import Home from "./pages/search";
+import Saved from "./pages/saved";
 import NoMatch from "./pages/NoResult";
 import Nav from "./components/navbar/navbar.index";
 // TODO import and incorporate search, saved and no result pages

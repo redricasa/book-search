@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 const mongoose = require('mongoose');
 const routes = require('./routes/routes.index')
@@ -24,9 +24,8 @@ app.get("*", (req, res) => {
 // connect to Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://user:password1@ds035310.mlab.com:35310/heroku_mmkdvd75",
-  {
-    useMongoClient: true
-  }
+  { useNewUrlParser: true }
+ 
 );
 
 app.listen(PORT, () => {

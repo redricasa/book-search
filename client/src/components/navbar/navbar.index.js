@@ -3,15 +3,22 @@ import React from "react";
 function Nav(props){
     return(
 
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo center">Google Books</a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a href="sass.html">Search</a></li>
-                        <li><a href="badges.html">Saved</a></li>
-                    </ul>
-                </div>
+        <div className="navbar-fixed">
+            <nav className= "navbar">
+                <ul>
+                    <li className= "brand">
+                        {/* the a tag and href gives the sections their own space */}
+                        <a href="/" > Google Books </a>
+                    </li>
+                    <li className= "search">
+                        {/* status updates will be displayed here */}
+                        <a href="/">Search </a>
+                    </li>
+                    <li className= "score">
+                        {/* score will be displayed here */}
+                        <a href="#!">Save </a>
+                    </li>
+                </ul>
             </nav>
         </div>
     )

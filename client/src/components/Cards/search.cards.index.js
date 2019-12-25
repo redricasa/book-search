@@ -20,8 +20,6 @@ function SearchCard(props){
                 </div>
             </div>
         </div>
-        
-       
     )
 };
 export default SearchCard;

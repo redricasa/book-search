@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Jumbotron from "../components/Jumbotron";
-import Card from "../components/Card";
-import Form from "../components/Form";
-import Book from "../components/Book";
+import Card from "../components/Cards/saved.cards.index";
+import Navbar from "../components/navbar/navbar.index"
+import Header from "../components/header/header.index";
 import API from "../utils/API";
-import { List } from "../components/List";
+import { List } from "../components/List/list.index";
 
 class Home extends Component {
   state = {
@@ -56,17 +55,9 @@ class Home extends Component {
 
   render() {
     return (
-      <Container>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1 className="text-center">
-                <strong>(React) Google Books Search</strong>
-              </h1>
-              <h2 className="text-center">Search for and Save Books of Interest.</h2>
-            </Jumbotron>
-          </Col>
-          <Col size="md-12">
+      <Navbar/>
+      <Header/> 
+        
             <Card title="Book Search" icon="far fa-book">
               <Form
                 handleInputChange={this.handleInputChange}
@@ -74,10 +65,7 @@ class Home extends Component {
                 query={this.state.query}
               />
             </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
+          
             <Card title="Results">
               {this.state.books.length ? (
                 <List>
@@ -105,10 +93,7 @@ class Home extends Component {
                 <h2 className="text-center">{this.state.message}</h2>
               )}
             </Card>
-          </Col>
-        </Row>
-        <Footer />
-      </Container>
+          
     );
   }
 }

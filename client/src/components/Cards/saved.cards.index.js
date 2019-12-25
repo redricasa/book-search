@@ -12,10 +12,10 @@ function SaveCard(props){
                         <p>{props.description}</p>
                     </div>
                     <div className="card-action">
-                    // delete button
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
-                    // view botton
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">visibility</i></a>
+                        // delete button
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                        // view botton
+                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">visibility</i></a>
                     </div>
                 </div>
             </div>
