@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "../components/Cards/saved.cards.index";
+import Card from "../components/Cards/search.cards.index";
 import Navbar from "../components/navbar/navbar.index"
 import Header from "../components/header/header.index";
 import API from "../utils/API";
@@ -55,46 +55,47 @@ class Home extends Component {
 
   render() {
     return (
-      <Navbar/>
-      <Header/> 
-        
-            <Card title="Book Search" icon="far fa-book">
-              <Form
-                handleInputChange={this.handleInputChange}
-                handleFormSubmit={this.handleFormSubmit}
-                query={this.state.query}
-              />
-            </Card>
+      <React.Fragment>
+        <Navbar/>
+        <Header/> 
           
-            <Card title="Results">
-              {this.state.books.length ? (
-                <List>
-                  {this.state.books.map(book => (
-                    <Book
-                      key={book.id}
-                      title={book.volumeInfo.title}
-                      subtitle={book.volumeInfo.subtitle}
-                      link={book.volumeInfo.infoLink}
-                      authors={book.volumeInfo.authors.join(", ")}
-                      description={book.volumeInfo.description}
-                      image={book.volumeInfo.imageLinks.thumbnail}
-                      Button={() => (
-                        <button
-                          onClick={() => this.handleBookSave(book.id)}
-                          className="btn btn-primary ml-2"
-                        >
-                          Save
-                        </button>
-                      )}
-                    />
-                  ))}
-                </List>
-              ) : (
-                <h2 className="text-center">{this.state.message}</h2>
-              )}
-            </Card>
-          
-    );
+        <Card title="Book Search" icon="far fa-book">
+          <Form
+            handleInputChange={this.handleInputChange}
+            handleFormSubmit={this.handleFormSubmit}
+            query={this.state.query}
+          />
+        </Card>
+      
+        <Card title="Results">
+          {this.state.books.length ? (
+            <List>
+              {this.state.books.map(book => (
+                <Book
+                  key={book.id}
+                  title={book.volumeInfo.title}
+                  subtitle={book.volumeInfo.subtitle}
+                  link={book.volumeInfo.infoLink}
+                  authors={book.volumeInfo.authors.join(", ")}
+                  description={book.volumeInfo.description}
+                  image={book.volumeInfo.imageLinks.thumbnail}
+                  Button={() => (
+                    <button
+                      onClick={() => this.handleBookSave(book.id)}
+                      className="btn btn-primary ml-2"
+                    >
+                      Save
+                    </button>
+                  )}
+                />
+              ))}
+            </List>
+          ) : (
+            <h2 className="text-center">{this.state.message}</h2>
+          )}
+        </Card>
+      </React.Fragment>
+    )
   }
 }
 

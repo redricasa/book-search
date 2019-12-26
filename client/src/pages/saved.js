@@ -27,19 +27,17 @@ class Saved extends Component {
   handleBookDelete = id => {
     API.deleteBook(id).then(res => this.getSavedBooks());
   };
+    //TODO stretch goal: add handler to view book and get directed to amazon page to buy book
 
-  render() {
-    return (
+
+
+    render() {
         
-        <Navbar/>
-        <Header/>
-        <Card title="Saved Books" icon="download">
-              {(this.state.books.length )
-              ? 
-              (
-                <List>
-                    {this.state.books.map(book => (
-                        <Book
+        {(this.state.books.length )
+            ? 
+            (
+                // {this.state.books.map(book => (
+                    <Book
                         key={book._id}
                         title={book.title}
                         link={book.link}
@@ -47,24 +45,26 @@ class Saved extends Component {
                         description={book.description}
                         image={book.image}
                         Button={() => (
-                            <button
-                            onClick={() => this.handleBookDelete(book._id)}
-                            className="btn btn-danger ml-2"
-                            >
-                            Delete
-                            </button>
+                            <a class="btn-floating btn-large waves-effect waves-light red">
+                                onClick={() => this.handleBookDelete(book._id)}<i class="material-icons">delete</i>
+                            </a>
                         )}
-                        />
-                    ))}
-                </List>
-              ) 
-              : 
-              (
+                    />
+                // )
+            )
+            
+            : 
+            (
                 <h2 className="text-center">No Saved Books</h2>
-              )}
-        </Card>
-    )
-  }
+            )}
+        return (
+            <React.Fragment>
+                <Navbar/>
+                <Header/>
+                
+            </React.Fragment>
+        )
+    }
 }
 
 export default Saved;

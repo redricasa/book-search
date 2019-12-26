@@ -7,8 +7,14 @@ const BookSchema = new Schema({
     authors: [String],
     description: String,
     image: Buffer,
-    link: Buffer,
-    title: String
+    link:{ 
+        type: Buffer,
+        required: true
+    },
+    title: {
+        type: String,
+        required: true
+    }
 })
 
 module.exports = mongoose.model('Book', BookSchema);

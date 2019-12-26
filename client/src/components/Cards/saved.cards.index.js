@@ -14,14 +14,12 @@ function SaveCard(props){
                     <div className="card-action">
                         // delete button
                         <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">delete</i></a>
-                        // view botton
+                        // view botton equivalent to link
                         <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">visibility</i></a>
                     </div>
                 </div>
             </div>
-        </div>
-        
-       
+        </div>       
     )
 };
 export default SaveCard;
