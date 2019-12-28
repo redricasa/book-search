@@ -69,6 +69,7 @@ class Home extends Component {
       
         <Card title="Results">
           {this.state.books.length ? (
+            //TODO: bind this to get rid of the need for List tag
             <List>
               {this.state.books.map(book => (
                 <Book
@@ -80,19 +81,19 @@ class Home extends Component {
                   description={book.volumeInfo.description}
                   image={book.volumeInfo.imageLinks.thumbnail}
                   Button={() => (
-                    <button
+                    <a className="btn-floating btn-large waves-effect waves-light red">
                       onClick={() => this.handleBookSave(book.id)}
-                      className="btn btn-primary ml-2"
-                    >
-                      Save
-                    </button>
+                    <i className="material-icons">Save</i>
+                    </a>
                   )}
                 />
+                
               ))}
             </List>
           ) : (
             <h2 className="text-center">{this.state.message}</h2>
-          )}
+          )
+          }
         </Card>
       </React.Fragment>
     )

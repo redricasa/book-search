@@ -3,7 +3,7 @@ import Card from "../components/Cards/saved.cards.index";
 import Navbar from "../components/navbar/navbar.index"
 import Header from "../components/header/header.index";
 import API from "../utils/API";
-import { List } from "../components/List/list.index";
+
 
 class Saved extends Component {
   state = {
@@ -33,7 +33,8 @@ class Saved extends Component {
 
     render() {
         // if there's results, display; if not display "no saved books"
-        {(this.state.books.length )
+        {
+            (this.state.books.length )
             ? 
             (
                 // {this.state.books.map(book => (
@@ -45,18 +46,16 @@ class Saved extends Component {
                     description={book.description}
                     image={book.image}
                     Button={() => (
-                        <a class="btn-floating btn-large waves-effect waves-light red">
-                            onClick={() => this.handleBookDelete(book._id)}<i class="material-icons">delete</i>
+                        <a className="btn-floating btn-large waves-effect waves-light red">
+                            onClick={() => this.handleBookDelete(book._id)}<i className="material-icons">delete</i>
                         </a>
                     )}
                 />
                 // )
-            )
-            
-            : 
-            (
+            ): (
                 <h2 className="text-center">No Saved Books</h2>
-            )}
+            )
+        }
         return (
             <React.Fragment>
                 <Navbar/>
