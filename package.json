@@ -8,6 +8,7 @@
   },
   "homepage" : "https://calm-dawn-69453.herokuapp.com",
   "main": "server.js",
+  "proxy": "http://localhost:4000/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

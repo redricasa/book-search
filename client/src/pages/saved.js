@@ -34,8 +34,6 @@ class Saved extends Component {
     };
     //TODO stretch goal: add handler to view book and get directed to amazon page to buy book
 
-
-
     render() {
        
         // TODO push cards into an array 
