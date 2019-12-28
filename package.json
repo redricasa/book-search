@@ -1,12 +1,16 @@
 {
   "name": "mern",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Mern app",
+  "engines": {
+    "node": "10.16.0",
+    "npm": "6.13.2"
+  },
+  "homepage" : "https://calm-dawn-69453.herokuapp.com",
   "main": "server.js",
-  "homepage": "https://redricasa.github.io/Memory-Game/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
