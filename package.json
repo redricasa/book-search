@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Mern Demo",
   "main": "server.js",
+  "homepage": "https://redricasa.github.io/Memory-Game/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -13,7 +14,10 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "author": "",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "author": "Frederica Blissett",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",

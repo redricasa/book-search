@@ -7,6 +7,7 @@ A full stack application that lets user search for books through google search a
 - First run `npm install` in the terminal to install all the dependencies.
 - Use <React.Fragment> tag to encompass all the components in a return statement.
 - refer to package.json for build commands(make sure you're in the right folder before doing `npm run build` the first time!)
+- for `gh-pages` to show up under settings in github, one needs to npm run build  and then npm run deploy  after adding  to the scripts in `package.json`.
 ## Technologies Used:
     - React JS
     - HTML
@@ -21,6 +22,10 @@ A full stack application that lets user search for books through google search a
         - mongoose
         - path
         - body-parser
+        - gh-pages
+        - nodemon
+        - file-loader
+        - concurrently
     - Heroku add-ons:
         - MongoDB
         - mLab
