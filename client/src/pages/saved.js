@@ -32,24 +32,24 @@ class Saved extends Component {
 
 
     render() {
-        
+        // if there's results, display; if not display "no saved books"
         {(this.state.books.length )
             ? 
             (
                 // {this.state.books.map(book => (
-                    <Book
-                        key={book._id}
-                        title={book.title}
-                        link={book.link}
-                        authors={book.authors.join(", ")}
-                        description={book.description}
-                        image={book.image}
-                        Button={() => (
-                            <a class="btn-floating btn-large waves-effect waves-light red">
-                                onClick={() => this.handleBookDelete(book._id)}<i class="material-icons">delete</i>
-                            </a>
-                        )}
-                    />
+                <Book
+                    key={book._id}
+                    title={book.title}
+                    link={book.link}
+                    authors={book.authors.join(", ")}
+                    description={book.description}
+                    image={book.image}
+                    Button={() => (
+                        <a class="btn-floating btn-large waves-effect waves-light red">
+                            onClick={() => this.handleBookDelete(book._id)}<i class="material-icons">delete</i>
+                        </a>
+                    )}
+                />
                 // )
             )
             
