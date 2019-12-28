@@ -4,6 +4,9 @@ import Navbar from "../components/navbar/navbar.index"
 import Header from "../components/header/header.index";
 import API from "../utils/API";
 import { List } from "../components/List/list.index";
+import Book from "../components/Book/book.index";
+import Form from "../components/Form/form.index";
+
 
 class Home extends Component {
   state = {
@@ -98,6 +101,6 @@ class Home extends Component {
       </React.Fragment>
     )
   }
-}
+};
 
 export default Home;

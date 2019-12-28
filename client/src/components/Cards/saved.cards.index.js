@@ -8,7 +8,7 @@ function SaveCard(props){
                 <div className="card purple darken-3">
                     <div className="card-content white-text">
                         <span className="card-title">{props.title}</span>
-                        {/* import children from app.js for description */}
+                
                         <p>{props.description}</p>
                     </div>
                     <div className="card-action">

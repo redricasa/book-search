@@ -4,7 +4,9 @@ google book search engine - full stack
 ## Overview:
 A full stack application that lets user search for books through google search and lets users save results into mongoose database and later delete the record if they so choose.
 ## Developer Notes:
-first run `npm install` in the terminal to install all the dependencies
+- First run `npm install` in the terminal to install all the dependencies.
+- Use <React.Fragment> tag to encompass all the components in a return statement.
+- refer to package.json for build commands(make sure you're in the right folder before doing `npm run build` the first time!)
 ## Technologies Used:
     - React JS
     - HTML
@@ -25,7 +27,7 @@ first run `npm install` in the terminal to install all the dependencies
         
 ## Things learned:
 - How to integrate knowledge from gifTastic project and translate documentations for multiple npm modules to work with JSX instead of Jquery.
-- 
+
 
 ## Stretch Goal(s):
 - Use React routing and socket.io to create a notification or a component that triggers whenever a user saves an book. Your message should include the title of the saved book.
@@ -35,3 +37,4 @@ first run `npm install` in the terminal to install all the dependencies
     - Use Socket.io NPM package
 - Add number of API results in a badge using a component
 - Add autocomplete materialize css for the search input- [https://materializecss.com/autocomplete.html](https://materializecss.com/autocomplete.html)
+- Create a Favicon.io! :D 

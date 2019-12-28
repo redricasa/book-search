@@ -17,7 +17,7 @@ class Saved extends Component {
     };
     componentDidMount() {
         this.getSavedBooks();
-    }
+    };
 
     getSavedBooks = () => {
         API.getSavedBooks()
@@ -32,12 +32,12 @@ class Saved extends Component {
     handleBookDelete = id => {
         API.deleteBook(id).then(res => this.getSavedBooks());
     };
-        //TODO stretch goal: add handler to view book and get directed to amazon page to buy book
+    //TODO stretch goal: add handler to view book and get directed to amazon page to buy book
 
 
 
     render() {
-        // if there's results, display; if not display "no saved books"
+       
         // TODO push cards into an array 
         var Cards = [];
         // loops through the geezNums.json and renders images
@@ -59,7 +59,9 @@ class Saved extends Component {
                     )}
                 />
             )
-        }
+        };
+        // TODO if there's results, display; if not display "no saved books"
+
         return (
             <React.Fragment>
                 <Navbar/>
@@ -68,10 +70,8 @@ class Saved extends Component {
                 {Cards}
                 
             </React.Fragment>
-
-        )
-        
-    }
-}
+        );
+    };
+};
 
 export default Saved;
