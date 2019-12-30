@@ -16,7 +16,7 @@ function Nav(props){
                     </li>
                     <li className= "score">
                         {/* score will be displayed here */}
-                        <a href="#!">Save </a>
+                        <a href="/save">Save </a>
                     </li>
                 </ul>
             </nav>

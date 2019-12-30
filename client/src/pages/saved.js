@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "../components/Cards/saved.cards.index";
+
 import Navbar from "../components/navbar/navbar.index"
 import Header from "../components/header/header.index";
 import API from "../utils/API";

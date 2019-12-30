@@ -62,13 +62,12 @@ class Home extends Component {
         <Navbar/>
         <Header/> 
           
-        {/* <Card title="Book Search" icon="far fa-book"> */}
-          <Form
-            handleInputChange={this.handleInputChange}
-            handleFormSubmit={this.handleFormSubmit}
-            query={this.state.query}
-          />
-        {/* </Card> */}
+        <Form
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+          query={this.state.query}
+        />
+       
       
         <Card title="Results">
           {this.state.books.length ? (
@@ -79,7 +78,6 @@ class Home extends Component {
                 <Book
                   key={book.id}
                   title={book.volumeInfo.title}
-                  subtitle={book.volumeInfo.subtitle}
                   link={book.volumeInfo.infoLink}
                   authors={book.volumeInfo.authors.join(", ")}
                   description={book.volumeInfo.description}

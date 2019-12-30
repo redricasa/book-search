@@ -9,7 +9,7 @@ function SaveCard(props){
                     <div className="card-content white-text">
                         <span className="card-title">{props.title}</span>
                         <div className="card-image">
-                            <img src={props.image}/>
+                            <img src={props.image} alt = {props.title}/>
                         </div>
                         <p>{props.description}</p>
                     </div>
