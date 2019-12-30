@@ -33,7 +33,7 @@ A full stack application that lets user search for books through google search a
         
 ## Things learned:
 - How to integrate knowledge from gifTastic project and translate documentations for multiple npm modules to work with JSX instead of Jquery.
-
+- In order to see the react app locally, you have to have a build folder created and served
 
 ## Stretch Goal(s):
 - Use React routing and socket.io to create a notification or a component that triggers whenever a user saves an book. Your message should include the title of the saved book.
