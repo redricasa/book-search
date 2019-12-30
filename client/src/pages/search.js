@@ -62,19 +62,20 @@ class Home extends Component {
         <Navbar/>
         <Header/> 
           
-        <Card title="Book Search" icon="far fa-book">
+        {/* <Card title="Book Search" icon="far fa-book"> */}
           <Form
             handleInputChange={this.handleInputChange}
             handleFormSubmit={this.handleFormSubmit}
             query={this.state.query}
           />
-        </Card>
+        {/* </Card> */}
       
         <Card title="Results">
           {this.state.books.length ? (
             //TODO: bind this to get rid of the need for List tag
             <List>
               {this.state.books.map(book => (
+                
                 <Book
                   key={book.id}
                   title={book.volumeInfo.title}

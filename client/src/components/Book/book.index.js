@@ -12,7 +12,7 @@ function Book({ title, authors, link, description, image, Button }) {
                         <p>{description}</p>
                     </div>
                     <div className="card-action">
-                        // view botton
+                        
                         <a className="btn-floating btn-large waves-effect waves-light red" href={link}><i className="material-icons">visibility</i></a>   
                         {Button}             
                     </div>

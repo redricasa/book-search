@@ -1,31 +1,22 @@
 import React from "react";
-
+//TODO replace tags with materialize 
 function Form({ query, handleInputChange, handleFormSubmit }) {
   return (
+
     <form>
-      <div className="form-group">
-        <label htmlFor="query">
-          <strong>Book</strong>
-        </label>
-        <input
-          className="form-control"
-          id="Title"
-          type="text"
+      <div class="input-field">
+        <input 
+          id="search" 
+          type="search" 
+          required 
+          onChange={handleInputChange} 
+          placeholder="Title"
           value={query}
-          placeholder="Ready Player One"
-          name="query"
-          onChange={handleInputChange}
-          required
         />
-      </div>
-      <div className="pull-right">
-        <button
-          onClick={handleFormSubmit}
-          type="submit"
-          className="btn btn-lg btn-danger float-right"
-        >
-          Search
-        </button>
+        <label class="label-icon" for="search">
+          <i class="material-icons" onClick={handleFormSubmit}>search</i>
+        </label>
+        <i class="material-icons">close</i>
       </div>
     </form>
   );
