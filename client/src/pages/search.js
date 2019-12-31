@@ -11,23 +11,26 @@ import Form from "../components/Form/form.index";
 class Home extends Component {
   state = {
     books: [],
-    query: "",
+    query: "harry potter",
     message: "Search For A Book To Begin!"
   };
 
   handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
+    console.log(event)
+    // const { name, value } = event.target;
+    // this.setState({
+    //   [name]: value
+    // });
   };
 
   getBooks = () => {
     API.getBooks(this.state.query)
-      .then(res =>
-        this.setState({
-          books: res.data
-        })
+      .then(res =>{
+        console.log(res)
+          this.setState({
+            books: res.data
+          })
+        }
       )
       .catch(() =>
         this.setState({
@@ -38,6 +41,7 @@ class Home extends Component {
   };
 
   handleFormSubmit = event => {
+    console.log(event)
     event.preventDefault();
     this.getBooks();
   };

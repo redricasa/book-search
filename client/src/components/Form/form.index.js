@@ -2,24 +2,28 @@ import React from "react";
 //TODO replace tags with materialize 
 function Form({ query, handleInputChange, handleFormSubmit }) {
   return (
-    <div class="nav-wrapper">
-      <form>
-        <div class="input-field">
+    <div className="nav-wrapper">
+      <div>
+        <div className="input-field">
           <input 
             onChange={handleInputChange}
             id="search" 
-            type="search" 
-            required 
-             
+            type="search"  
             placeholder="Title"
-            value={query}
+            required
           />
-          <label class="label-icon" for="search">
-            <i class="material-icons" onClick={handleFormSubmit}>search</i>
+          <label className="label-icon" for="search">
+            <i className="material-icons">search</i>
+              
           </label>
-
+          <button 
+            className="btn waves-effect waves-light" 
+            onClick={handleFormSubmit}
+            >Submit
+            <i className="material-icons right" >send</i>
+          </button>
         </div>
-      </form>
+      </div>
     </div>
   );
 }

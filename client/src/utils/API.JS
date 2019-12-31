@@ -1,9 +1,11 @@
 import axios from "axios";
+const googleController = require("../../../controllers/google.control");
 
 export default {
   // Gets books from the Google API
   getBooks: function(query) {
     return axios.get("/api/google", { params: { query: "title:" + query } });
+    // return googleController.findAll({ q: "title:" + query })
   },
   // Gets all saved books
   getSavedBooks: function() {
