@@ -30,42 +30,40 @@ class Saved extends Component {
     };
 
     handleBookDelete = id => {
-        API.deleteBook(id).then(res => this.getSavedBooks());
+        return function(){
+            API.deleteBook(id).then(res => this.getSavedBooks());
+        }
     };
     //TODO stretch goal: add handler to view book and get directed to amazon page to buy book
 
     render() {
-       
-        // TODO push cards into an array 
-        var Cards = [];
-        // loops through the geezNums.json and renders images
-        for(let index=0;index< API.length ;index++){
-            Cards
-            .push(
-                // calls the geez function in geez/index.js
-                <Book
-                    key={API[index]._id}
-                    title={API[index].title}
-                    link={API[index].link}
-                    authors={API[index].authors.join(", ")}
-                    description={API[index].description}
-                    image={API[index].image}
-                    Button={() => (
-                        <a className="btn-floating btn-large waves-effect waves-light red">
-                            onClick={() => this.handleBookDelete(API[index]._id)}<i className="material-icons">delete</i>
-                        </a>
-                    )}
-                />
-            )
-        };
-        // TODO if there's results, display; if not display "no saved books"
 
         return (
             <React.Fragment>
                
                 <Header/>
             
-                {Cards}
+                <div>
+                {this.state.books.length ? (
+                    this.state.books.map(book => (
+
+                        <Book
+                            key={book.id}
+                            title={book.volumeInfo.title}
+                            link={book.volumeInfo.infoLink}
+                            authors={book.volumeInfo.authors.join(", ")}
+                            description={book.volumeInfo.description}
+                            image={book.volumeInfo.imageLinks.thumbnail}
+                            callback={this.handleBookDelete(book.id)}
+                            icon= "delete" 
+                        />
+                    ))
+
+                ) : (
+                    <h2 className="text-center">{this.state.message}</h2>
+                )
+                }
+                </div>
                 
             </React.Fragment>
         );

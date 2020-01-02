@@ -1,7 +1,7 @@
 import React from "react";
 
 // TODO add rest of grey items to card 
-function Book({ title, authors, link, description, image, onSave }) {
+function Book({ title, authors, link, description, image, callback, icon }) {
     return (
         <div className="row">
             <div className="col s12">
@@ -17,8 +17,8 @@ function Book({ title, authors, link, description, image, onSave }) {
                             <i className="material-icons">visibility</i>
                         </a>   
 
-                        <a className="btn-floating btn-large waves-effect waves-light red" onClick={() =>onSave() }>
-                            <i className="material-icons">Save</i>
+                        <a className="btn-floating btn-large waves-effect waves-light red" onClick={() =>callback() }>
+                            <i className="material-icons">{icon}</i>
                         </a>        
                     </div>
                 </div>

@@ -84,7 +84,8 @@ class Home extends Component {
                 authors={book.volumeInfo.authors.join(", ")}
                 description={book.volumeInfo.description}
                 image={book.volumeInfo.imageLinks.thumbnail}
-                onSave={this.handleBookSave(book)}
+                callback={this.handleBookSave(book)}
+                icon= "save" 
               />
             ))
             
