@@ -1,5 +1,5 @@
 const axios = require("axios");
-const db = require("../models/book.model");
+const Book = require("../models/book.model");
 
 // Defining methods for the googleController
 
@@ -30,6 +30,15 @@ module.exports = {
           // console.log("filtered: ", filtered)
           return filtered
         }
+      )
+      .then(apiBooks =>
+        Book.find().then(dbBooks =>{
+          console.log("database books: ", dbBooks);
+            return apiBooks.filter(apiBook =>
+              dbBooks.every(dbBook => dbBook.googleId.toString() !== apiBook.id)
+            )
+          }
+        )
       )
       .then(books => res.json(books))
       .catch(err => res.status(422).json(err));

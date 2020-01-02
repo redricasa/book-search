@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-
-
 import Header from "../components/header/header.index";
 import API from "../utils/API";
 import Book from "../components/Book/book.index";
@@ -14,6 +12,7 @@ class Saved extends Component {
         super(props);
         // This binding is necessary to make `this` work in the callback
         this.getSavedBooks = this.getSavedBooks.bind(this);
+        this.handleBookDelete = this.handleBookDelete.bind(this);
     };
     componentDidMount() {
         this.getSavedBooks();
@@ -30,8 +29,9 @@ class Saved extends Component {
     };
 
     handleBookDelete = id => {
-        return function(){
-            API.deleteBook(id).then(res => this.getSavedBooks());
+        return ()=> {
+            API.deleteBook(id)
+            .then(() => this.getSavedBooks());
         }
     };
     //TODO stretch goal: add handler to view book and get directed to amazon page to buy book

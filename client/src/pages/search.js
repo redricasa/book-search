@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Card from "../components/Cards/search.cards.index";
-
 import Header from "../components/header/header.index";
 import API from "../utils/API";
 
@@ -14,13 +12,20 @@ class Home extends Component {
     query: "harry potter",
     message: "Search For A Book To Begin!"
   };
+  constructor(props) {
+    super(props);
+    // This binding is necessary to make `this` work in the callback
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+    this.getBooks = this.getBooks.bind(this);
+    this.handleBookSave = this.handleBookSave.bind(this);
+    this.handleInputChange = this.handleBookSave.bind(this);
+    
+};
 
   handleInputChange = event => {
-    console.log(event)
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
+    this.setState(
+      {query: event.target.value}
+    )
   };
 
   getBooks = () => {
@@ -33,6 +38,7 @@ class Home extends Component {
         }
       )
       .catch(() =>
+      // TODO: have a message in case of an empty array
         this.setState({
           books: [],
           message: "No New Books Found, Try a Different Query"
@@ -48,7 +54,7 @@ class Home extends Component {
 
   handleBookSave = book => {
     
-    return function(){ 
+    return ()=> { 
       console.log("saving book: ", book);
       API.saveBook({
         googleId: book.id,

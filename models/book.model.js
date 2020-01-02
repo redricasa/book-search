@@ -14,6 +14,10 @@ const BookSchema = new Schema({
     title: {
         type: String,
         required: true
+    },
+    googleId: {
+        type: String,
+        required: true
     }
 })
 
