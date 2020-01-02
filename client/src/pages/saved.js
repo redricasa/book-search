@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Navbar from "../components/navbar/navbar.index"
+
 import Header from "../components/header/header.index";
 import API from "../utils/API";
 import Book from "../components/Book/book.index";
@@ -62,7 +62,7 @@ class Saved extends Component {
 
         return (
             <React.Fragment>
-                <Navbar/>
+               
                 <Header/>
             
                 {Cards}
