@@ -8,15 +8,15 @@ function Nav(props){
                 <ul>
                     <li className= "brand">
                        
-                        <a href="/" > Google Books </a>
+                        <a href="/" >Google Books</a>
                     </li>
                     <li className= "search">
                        
-                        <a href="/search">Search </a>
+                        <a href="/search">Search</a>
                     </li>
                     <li className= "score">
                         
-                        <a href="/saved">Save </a>
+                        <a href="/saved">Saved</a>
                     </li>
                 </ul>
             </nav>

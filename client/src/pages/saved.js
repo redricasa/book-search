@@ -48,13 +48,13 @@ class Saved extends Component {
                     this.state.books.map(book => (
 
                         <Book
-                            key={book.id}
-                            title={book.volumeInfo.title}
-                            link={book.volumeInfo.infoLink}
-                            authors={book.volumeInfo.authors.join(", ")}
-                            description={book.volumeInfo.description}
-                            image={book.volumeInfo.imageLinks.thumbnail}
-                            callback={this.handleBookDelete(book.id)}
+                            key={book._id}
+                            title={book.title}
+                            link={book.link}
+                            authors={book.authors.join(", ")}
+                            description={book.description}
+                            image={book.image}
+                            callback={this.handleBookDelete(book._id)}
                             icon= "delete" 
                         />
                     ))

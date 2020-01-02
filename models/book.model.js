@@ -6,9 +6,9 @@ const Schema = mongoose.Schema;
 const BookSchema = new Schema({
     authors: [String],
     description: String,
-    image: Buffer,
+    image: String,
     link:{ 
-        type: Buffer,
+        type: String,
         required: true
     },
     title: {
