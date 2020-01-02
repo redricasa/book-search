@@ -12,7 +12,7 @@ function Nav(props){
                     </li>
                     <li className= "search">
                        
-                        <a href="/">Search </a>
+                        <a href="/search">Search </a>
                     </li>
                     <li className= "score">
                         

@@ -14,20 +14,22 @@ module.exports = {
         params
       })
       .then(results =>
-        results.data.items.filter(
-          result =>
-            result.volumeInfo.title &&
-            result.volumeInfo.authors &&
-            result.volumeInfo.description &&
-            result.volumeInfo.imageLinks.thumbnail
-        )
-      )
-      .then(apiBooks =>
-        db.Book.find().then(dbBooks =>
-          apiBooks.filter(apiBook =>
-            dbBooks.every(dbBook => dbBook.googleId.toString() !== apiBook.id)
+        {
+          
+          var filtered = results.data.items.filter(
+
+            result =>
+              {
+                // console.log(result.volumeInfo)
+                return result.volumeInfo.title &&
+                result.volumeInfo.authors &&
+                result.volumeInfo.description &&
+                result.volumeInfo.imageLinks.thumbnail
+              }
           )
-        )
+          // console.log("filtered: ", filtered)
+          return filtered
+        }
       )
       .then(books => res.json(books))
       .catch(err => res.status(422).json(err));

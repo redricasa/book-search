@@ -62,7 +62,7 @@ class Saved extends Component {
 
         return (
             <React.Fragment>
-                {/* <Navbar/> */}
+                <Navbar/>
                 <Header/>
             
                 {Cards}

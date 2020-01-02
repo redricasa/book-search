@@ -14,6 +14,7 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/search" component={Home} />
           <Route exact path="/saved" component={Saved} />
           <Route component={NoResult} />
         </Switch>

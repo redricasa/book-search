@@ -63,7 +63,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <Navbar/> */}
+        <Navbar/>
         <Header/> 
           
         <Form
