@@ -15,9 +15,7 @@ module.exports = {
       })
       .then(results =>
         {
-          
           var filtered = results.data.items.filter(
-
             result =>
               {
                 // console.log(result.volumeInfo)

@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import Header from "../components/header/header.index";
 import API from "../utils/API";
-
+import queryToStateHOC from 'react-query-to-state';
 import Book from "../components/Book/book.index";
 import Form from "../components/Form/form.index";
-
+import { createBrowserHistory } from 'history';
 
 class Home extends Component {
   state = {
     books: [],
-    query: "harry potter",
+    query: {searchStr},
     message: "Search For A Book To Begin!"
   };
   constructor(props) {
@@ -23,16 +23,17 @@ class Home extends Component {
   };
 
   handleInputChange = event => {
-    console.log("Event", event)
-    this.setState(
-      {query: event.target.value}
-    )
+    // console.log("Event", event)
+    // this.setState(
+      const { updateQueryState } = props
+      updateQueryState({searchStr: event.target.value})
+    // )
   };
 
   getBooks = () => {
     API.getBooks(this.state.query)
       .then(res =>{
-        console.log(res)
+        console.log("RESPONSE: ---->",res)
           this.setState({
             books: res.data
           })
@@ -70,6 +71,8 @@ class Home extends Component {
   };
 
   render() {
+    const { query } = this.props
+    const { searchStr } = query
     return (
       <React.Fragment>
        
@@ -105,4 +108,11 @@ class Home extends Component {
   }
 };
 
-export default Home;
+const config = {
+  initState: {
+    searchStr: ''
+  },
+  isReplace: true,
+  history: createBrowserHistory()
+}
+export default queryToStateHOC(Home, config);
