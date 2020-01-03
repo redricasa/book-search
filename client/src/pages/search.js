@@ -20,9 +20,10 @@ class Home extends Component {
     this.handleBookSave = this.handleBookSave.bind(this);
     this.handleInputChange = this.handleBookSave.bind(this);
     
-};
+  };
 
   handleInputChange = event => {
+    console.log("Event", event)
     this.setState(
       {query: event.target.value}
     )
@@ -77,7 +78,6 @@ class Home extends Component {
         <Form
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit}
-          query={this.state.query}
         />
         <div>
           {this.state.books.length ? (
