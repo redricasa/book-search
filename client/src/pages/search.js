@@ -9,7 +9,7 @@ import { createBrowserHistory } from 'history';
 class Home extends Component {
   state = {
     books: [],
-    query: {searchStr},
+    query: "toni morrison",
     message: "Search For A Book To Begin!"
   };
   constructor(props) {
@@ -19,13 +19,12 @@ class Home extends Component {
     this.getBooks = this.getBooks.bind(this);
     this.handleBookSave = this.handleBookSave.bind(this);
     this.handleInputChange = this.handleBookSave.bind(this);
-    
   };
 
   handleInputChange = event => {
     // console.log("Event", event)
     // this.setState(
-      const { updateQueryState } = props
+      const { updateQueryState } = this.props
       updateQueryState({searchStr: event.target.value})
     // )
   };

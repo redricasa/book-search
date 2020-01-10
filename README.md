@@ -39,10 +39,8 @@ A full stack application that lets user search for books through google search a
 
 ## Stretch Goal(s):
 - Use React routing and socket.io to create a notification or a component that triggers whenever a user saves an book. Your message should include the title of the saved book.
-
-
-    - Say you have multiple browsers open, each one visiting your site. If you save an book in one browser, then all of your browsers should notify you that a new book was saved.
-    - Use Socket.io NPM package
+- Say you have multiple browsers open, each one visiting your site. If you save an book in one browser, then all of your browsers should notify you that a new book was saved.
+- Use Socket.io NPM package
 - Add number of API results in a badge using a component
 - Add autocomplete materialize css for the search input- [https://materializecss.com/autocomplete.html](https://materializecss.com/autocomplete.html)
 - Create a Favicon.io! :D 

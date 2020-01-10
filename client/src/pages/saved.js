@@ -34,15 +34,10 @@ class Saved extends Component {
             .then(() => this.getSavedBooks());
         }
     };
-    //TODO stretch goal: add handler to view book and get directed to amazon page to buy book
-
     render() {
-
         return (
             <React.Fragment>
-               
                 <Header/>
-            
                 <div>
                 {this.state.books.length ? (
                     this.state.books.map(book => (
@@ -58,7 +53,6 @@ class Saved extends Component {
                             icon= "delete" 
                         />
                     ))
-
                 ) : (
                     <h2 className="text-center">{this.state.message}</h2>
                 )

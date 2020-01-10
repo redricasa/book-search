@@ -12,7 +12,8 @@
     "react-dom": "^16.6.3",
     "react-query-to-state": "0.0.3",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^2.1.8"
+    "react-scripts": "^2.1.8",
+    "serve": "^11.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

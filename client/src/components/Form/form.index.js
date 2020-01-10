@@ -13,8 +13,7 @@ function Form({ query, handleInputChange, handleFormSubmit }) {
             required
           />
           <label className="label-icon" for="search">
-            <i className="material-icons">search</i>
-              
+            <i className="material-icons">search</i> 
           </label>
           <button 
             className="btn waves-effect waves-light" 
